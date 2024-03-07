@@ -1,0 +1,14 @@
+[
+  {
+    "queryName": "sqlGetEquinorMnemonics",
+    "query": "SELECT * FROM {TABLE_NAME} WHERE GMSetName='EquinorGlobalSet' AND WellboreSpecific='T'"
+  },
+  {
+    "queryName": "sqlGetTop100",
+    "query": "SELECT Top(100)* FROM {TABLE_NAME}"
+  },
+  {
+    "queryName": "defaultGetQuery",
+    "query": "SELECT * FROM {TABLE_NAME}"
+  }
+]
