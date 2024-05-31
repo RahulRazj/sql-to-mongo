@@ -1,5 +1,4 @@
 import sql from 'mssql';
-import xmlParser from 'xml2json';
 import mongoose from 'mongoose';
 import { v4 as uuid } from 'uuid';
 import configQuery from '../config/sqlQuery.json' assert { type: 'json' };
