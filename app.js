@@ -3,8 +3,6 @@ import dotenv from 'dotenv';
 import BootstrapApp from './system/bootstrap.js';
 import RoutesConfig from './routes/index.js';
 import cors from 'cors';
-import mssql from 'mssql';
-import mongoose from 'mongoose';
 import { errorHanlderMiddleware, successHandlerMiddleware } from './middlewares/requestHanlder.js';
 
 dotenv.config();
@@ -18,7 +16,6 @@ app.use(errorHanlderMiddleware);
 app.use(successHandlerMiddleware);
 
 const ALLOWED_ORIGINS = process.env['Platform_ALLOWED_ORIGINS'].split(',');
-
 
 app.use(
 	cors({

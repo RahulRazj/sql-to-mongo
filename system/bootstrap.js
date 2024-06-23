@@ -7,7 +7,7 @@ import successCodes from '../config/successCodes.js';
 export default class Bootstrap {
 	constructor(app) {
 		this.initializeConfig();
-		this.port = this.normalizePort(process.env.Platform_Port);
+		this.port = this.normalizePort(process.env.PORT);
 		this.server = http.createServer(app);
 
 		this.server.listen(this.port);

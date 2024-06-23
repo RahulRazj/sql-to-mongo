@@ -32,11 +32,10 @@ export const createMongoDBConnection = async payLoad => {
 	};
 
 	try {
-		const connection = await mongoose.connect(payLoad.mongoConnectionString, options);
+		await mongoose.connect(payLoad.mongoConnectionString, options);
 
 		await mongoose.disconnect();
 		console.log('Connection to Mongo database successful');
-		console.log('mongo connection', connection);
 		return Promise.resolve(successCodes.MONGO_CONNECTION_SUCCESS);
 	} catch (err) {
 		console.log('err', err);
